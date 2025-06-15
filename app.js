@@ -1,3 +1,5 @@
+// scoll to top start
+
 let scrolled = false;
 
 const scrollBtn = document.getElementById("scrollTopBtn");
@@ -18,13 +20,14 @@ const scrollToTop = () => {
 
 window.addEventListener("scroll", handleScroll);
 
+// scoll to top end
+
 const allRecipesApi = async () => {
   try {
     const res = await fetch(
       "https://www.themealdb.com/api/json/v1/1/search.php?s="
     );
     const data = await res.json();
-
     loding();
     allRecipes(data.meals);
   } catch (error) {

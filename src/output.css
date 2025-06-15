@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-700: oklch(55.5% 0.163 48.998);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-indigo-500: oklch(58.5% 0.233 277.117);
     --color-indigo-700: oklch(45.7% 0.24 277.023);
@@ -225,6 +226,9 @@
   .table {
     display: table;
   }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -300,11 +304,17 @@
   .items-center {
     align-items: center;
   }
+  .justify-between {
+    justify-content: space-between;
+  }
   .justify-center {
     justify-content: center;
   }
   .justify-end {
     justify-content: flex-end;
+  }
+  .gap-\[8px\] {
+    gap: 8px;
   }
   .gap-\[10px\] {
     gap: 10px;
@@ -363,6 +373,9 @@
   .border-\[\#e80000\] {
     border-color: #e80000;
   }
+  .bg-\[\#3D4451\] {
+    background-color: #3D4451;
+  }
   .bg-\[\#989696\] {
     background-color: #989696;
   }
@@ -377,6 +390,9 @@
   }
   .bg-\[\#fff\] {
     background-color: #fff;
+  }
+  .bg-amber-700 {
+    background-color: var(--color-amber-700);
   }
   .bg-white {
     background-color: var(--color-white);
@@ -416,6 +432,9 @@
   }
   .px-\[15px\] {
     padding-inline: 15px;
+  }
+  .px-\[20\] {
+    padding-inline: 20;
   }
   .px-\[20px\] {
     padding-inline: 20px;
@@ -469,6 +488,9 @@
   }
   .text-\[\#f00\] {
     color: #f00;
+  }
+  .text-\[\#fff\] {
+    color: #fff;
   }
   .text-blue-600 {
     color: var(--color-blue-600);
@@ -567,6 +589,11 @@
       right: 40px;
     }
   }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
   .md\:max-w-\[60\%\] {
     @media (width >= 48rem) {
       max-width: 60%;
@@ -585,6 +612,11 @@
   .md\:px-5 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:px-\[50px\] {
+    @media (width >= 48rem) {
+      padding-inline: 50px;
     }
   }
   .xl\:max-w-\[60\%\] {
