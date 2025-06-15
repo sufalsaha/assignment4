@@ -1,10 +1,8 @@
-// console.log("hello");
 let scrolled = false;
 
 const scrollBtn = document.getElementById("scrollTopBtn");
 
 const handleScroll = () => {
-  // Show/hide scroll button
   if (window.scrollY > 100) {
     scrollBtn.classList.add("opacity-100", "pointer-events-auto");
     scrollBtn.classList.remove("opacity-0", "pointer-events-none");
@@ -27,10 +25,8 @@ const allRecipesApi = async () => {
     );
     const data = await res.json();
 
-    // console.log(data.meals);
     loding();
     allRecipes(data.meals);
-    // displayCategories(data.data); // ঠিকভাবে data access
   } catch (error) {
     console.error("Error loading categories:", error);
   }
@@ -42,10 +38,7 @@ const loding = () => {
 };
 
 const allRecipes = (e) => {
-  // console.log(e);
-
   const recipesContainer = document.getElementById("recipes");
-  //    const shortText = e.strInstructions.split(" ").slice(0, 15).join(" ") + "...";
 
   if (e) {
     const recipe = e.map((e) => {
