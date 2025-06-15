@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- header section start -->
+    <header class="flex justify-center items-center py-[20px]">
+      <div class="">
+        <img src="./img/logo.png" alt="" class="w-[150px]" />
+      </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- hero section start -->
+    <section>
+      <div
+        class="bg-[url(/img/page-title.jpg)] bg-cover bg-no-repeat py-[50px] flex flex-col justify-center items-center"
+      >
+        <div class="max-w-[400px] w-full">
+          <h1 class="text-5xl text-white font-bold text-center">
+            Search Your Favorite Recipe
+          </h1>
+          <p class="text-white text-center mt-[20px]">
+            A handful of simple ingredients typify the fresh, vibrant flavors of
+            Greek cooking
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- hero section end -->
+
+    <!-- search section start -->
+
+    <div class="flex justify-center items-center py-[20px]">
+      <form action=" " class="max-w-[600px] w-full px-[20px] flex">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search..."
+          class="w-full border-2 border-[#D8DADD] focus:outline-none rounded-bl-[8px] rounded-tl-[8px] px-[10px]"
+        />
+        <button
+          id="searchBtn"
+          type="submit"
+          class="px-[15px] py-[7px] bg-[#FBBD23] cursor-pointer hover:bg-[#d99a00] rounded-br-[8px] rounded-tr-[8px] text-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-search-icon lucide-search"
+          >
+            <path d="m21 21-4.34-4.34" />
+            <circle cx="11" cy="11" r="8" />
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- search section end -->
+
+    <!-- data section start -->
+    <div class="flex justify-center items-center">
+      <div class="max-w-[1440px] flex flex-col justify-center items-center">
+        <div class="pb-[30px]">
+          <h2 class="text-[36px] font-semibold text-center">Latest Recipes</h2>
+          <div
+            id="recipes"
+            class="flex flex-wrap justify-center gap-[20px] mt-[30px]"
+          >
+            <div id="loding" class="mt-[50px]">
+              <span>
+                <svg
+                  class="animate-spin h-10 w-10 text-blue-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    class="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    stroke-width="4"
+                  ></circle>
+                  <path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v8z"
+                  ></path>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      id="scrollTopBtn"
+      onclick="scrollToTop()"
+      class="bottom-[50px] right-5 md:right-[40px] cursor-pointer hover:bg-[#d99a00] fixed bg-[#FBBA1A] text-white rounded-[4px] opacity-0 pointer-events-none z-20"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-arrow-up-icon lucide-arrow-up"
+      >
+        <path d="m5 12 7-7 7 7" />
+        <path d="M12 19V5" />
+      </svg>
+    </button>
+
+    <div id="popap" class=""></div>
+    <!-- data section end -->
+
+    <script src="./app.js"></script>
+  </body>
+</html>
